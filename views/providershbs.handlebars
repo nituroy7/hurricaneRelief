@@ -1,0 +1,40 @@
+<div style ="padding-bottom: 100px"></div>
+<div class="container">
+<form method="POST" action="/package/create">
+<div class="row" id="providers-row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+        <div>
+        <br>                    
+        <form method="POST" action="/package/create">
+        <div class="well">
+            <div class="row">
+                <h2 class="text-center">Which location?</h2>
+                <br>
+                {{#each vendor}} {{#if_eq this.type 'venue'}}
+                <div class="col-sm-4">
+                    <div class="thumbnail">
+                        <img src="{{this.img}}" alt="{{this.img}}">
+                        <div class="caption">
+                            <h3 style="text-align: center">{{this.name}}</h3>
+                            <h4 style="text-align: center">{{this.address}}</h4>
+                            <h4>{{this.description}}</h4>
+                            <h4 style="text-align: center">{{this.capacity}}</h4>
+                            <h4 style="text-align: center">{{this.budget}}</h4>
+                            <br>
+                            <center>
+                            <input type="radio" name="venue" value="{{this.id}}" style="height:25px; width:25px; vertical-align: middle;">
+                            <p style="font-size: 8px; text-align: center;"><i>click to choose this location</i></p>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+                {{/if_eq}} {{/each}}
+            </div>
+        </div>
+        <input id="providerSubmit" type="submit">
+    </form>
+    </div>
+    <div class="col-sm-1"></div>
+    </div>
+    </div>

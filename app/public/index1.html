@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <title>My Chart.js Chart</title>
+</head>
+
+<body>
+    
+
+        <div class="container">
+            <!--   <nav class="navbar navbar-default navbar-fixed-top"></nav> -->
+            <div class="card">
+                <div class="card-block">
+                    <div class="col-md-3" style="padding:20px; margin-top: 90px;">
+                        <p float="left" margin-top: "20px" padding-top: "50%">This is all about the hurricane. Harvey, Irma, Maria the Red Cross says it has raised $350 million in donations as of Sept. 25. Corporate donations raised in the immediate aftermath of Harvey totaled about $160 million</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="col-md-8">
+                    <canvas id="myChart" width="200" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div>
+                    <div class="col-md-3" style="padding:20px; margin-top: 100px;">
+                        <p float="left" margin-top: "20px" padding-top: "50%">This is all about the hurricane. Harvey, Irma, Maria the Red Cross says it has raised $350 million in donations as of Sept. 25. Corporate donations raised in the immediate aftermath of Harvey totaled about $160 million</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="col-md-8">
+                        <canvas id="myChart1" width="200" height="100"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" style="padding:20px; margin-top: 100px;">
+                    <p float="left" margin-top: "20px" padding-top: "50%">This is all about the hurricane. Harvey, Irma, Maria the Red Cross says it has raised $350 million in donations as of Sept. 25. Corporate donations raised in the immediate aftermath of Harvey totaled about $160 million</p>
+                </div>
+                <div class="col-md-8">
+                    <canvas id="myChart2" width="200" height="100"></canvas>
+                </div>
+            </div>
+        </div>
+     
+        <script>
+        let myChart = document.getElementById('myChart').getContext('2d');
+
+        // Global Options
+        Chart.defaults.global.defaultFontFamily = 'Lato';
+        Chart.defaults.global.defaultFontSize = 18;
+        Chart.defaults.global.defaultFontColor = '#777';
+
+        let HurricaneChart = new Chart(myChart, {
+            type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Harvey', 'Irma', 'Maria'],
+                datasets: [{
+                    label: 'Damage in billion',
+                    data: [
+                        190,
+                        100,
+                        95
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Estimated damage in billion by Hurrricane',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+
+        let HurricaneChart1 = new Chart(myChart1, {
+            type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Harvey', 'Irma', 'Maria'],
+                datasets: [{
+                    label: '',
+                    data: [
+                        200,
+                        150,
+                        24.1,
+
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Donation in Millions',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+
+        let HurricaneChart2 = new Chart(myChart2, {
+            type: 'doughnut', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+            data: {
+                labels: ['Harvey', 'Irma', 'Maria'],
+                datasets: [{
+                    label: 'Wind',
+                    data: [
+                        132,
+                        185,
+                        175
+
+                    ],
+                    //backgroundColor:'green',
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.6)',
+                        'rgba(54, 162, 235, 0.6)',
+                        'rgba(255, 206, 86, 0.6)'
+                    ],
+                    borderWidth: 1,
+                    borderColor: '#777',
+                    hoverBorderWidth: 3,
+                    hoverBorderColor: '#000'
+                }]
+            },
+            options: {
+                title: {
+                    display: true,
+                    text: 'Wind mph',
+                    fontSize: 25
+                },
+                legend: {
+                    display: true,
+                    position: 'right',
+                    labels: {
+                        fontColor: '#000'
+                    }
+                },
+                layout: {
+                    padding: {
+                        left: 50,
+                        right: 0,
+                        bottom: 0,
+                        top: 0
+                    }
+                },
+                tooltips: {
+                    enabled: true
+                }
+            }
+        });
+        </script>
+</body>
+
+</html>

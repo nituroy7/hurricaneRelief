@@ -1,0 +1,32 @@
+<div style ="padding-bottom: 60px"></div><br>
+<div class="container">
+<div class="row" id="packages-row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+    <div class="well well-lg">
+        <h2 class="text-center">Your Itinerary</h2>
+        <br>
+        {{#each package}} 
+            {{#if this.venue}}
+            <div class="media">
+                <div class="">
+                   
+                    <img class="media-object" src="{{this.venue.img}}" style="float: left; padding: 0px 20px">
+                  
+                </div>
+            <div class="media-body">
+                <h4 class="media-heading" style="font-weight: 600">{{this.venue.name}} </h4>
+                <h4 class="media-heading">{{this.venue.capacity}}</h4>
+                <h4 class="media-heading">{{this.venue.budget}}</h4>
+            </div>
+            </div>
+            {{/if}}
+            
+        {{/each}}
+        
+        </div>
+    </div>
+ {{!--    <div class="col-sm-2"></div> --}}
+</div>
+</div>
+</div>

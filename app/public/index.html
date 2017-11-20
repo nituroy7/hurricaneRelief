@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Cookie' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/reset.css">
+    <!-- CSS reset -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Resource style -->
+    <link rel="stylesheet" href="css/index.css">
+    <!-- Resource style -->
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+    <title>Hurricane Relief</title>
+</head>
+
+<body>
+    <header class="cd-header" style="position: absolute; ">
+        <div id="cd-logo"><a href="#0"><img src="assets/images/hurricaneRelieflogo2.png" alt="Logo"></a></div>
+        <nav class="cd-primary-nav">
+            <ul>
+                <li><a href="/">Home</a></li>
+                <!--  <li><a href="#about-us">Volunteer</a></li> -->
+                <li><a href="#" onclick="document.getElementById('signup').style.display='block'" style="width:auto;">Volunteer</a>
+                    <!-- <a href="#0">Sign Up</a> -->
+                </li>
+                <li><a href="index1.html" onclick="document.getElementById('myButton').style.display='block'" style="width:auto;">Chart</a>
+                    <!-- <a href="#0">Sign In</a> -->
+                </li>
+                <li><a href="#" onclick="document.getElementById('signin').style.display='block'" style="width:auto;">Sign In</a></li>
+            </ul>
+            <!-- Donation Button block -->
+            <div id="fg_donation-button-block">
+                <!-- The Donation Button. You can restyle this to fit with your site design by removing the inline style elements. -->
+               <a href="donation.html" onclick="document.getElementById('fg_donation-button-block').style.display='block'" style="text-indent: -999999px; background: url(https://donate.firstgiving.com/dpa/static/img/consumer_donation_button.png) no-repeat; width: 202px; height: 62px; display: block; pointer: cursor; outline: 0; float: right">Donate Now</a></div>
+        </nav>
+        <!-- .cd-primary-nav -->
+    </header>
+    <section class="cd-hero">
+        <ul class="cd-hero-slider autoplay">
+            <li class="cd-bg-video">
+                <div class="cd-full-width">
+                </div>
+                <div class="cd-bg-video-wrapper" data-video="assets/video/hurricane1">
+                    <!-- video element will be loaded using jQuery -->
+                </div>
+                <!-- .cd-bg-video-wrapper -->
+            </li>
+           <!--  <li class="cd-bg-video">
+                <div class="cd-full-width">
+                </div>
+                <!- .cd-full-width -->
+                <!-- <div class="cd-bg-video-wrapper" data-video="assets/video/video2"> -->
+                    <!-- video element will be loaded using jQuery -->
+               <!--  </div>
+                .cd-bg-video-wrapper
+            </li> -->
+            <!-- <li class="cd-bg-video"> -->
+                <!-- <div class="cd-full-width"> -->
+                    <h2 style="color: #000099; font-size: 48px; padding-top: 100px; font-family:Impact, fantasy "></h2>
+                <!-- </div>
+                <! .cd-full-width -->
+               <!--  <div class="cd-bg-video-wrapper" data-video="assets/video/video3"> -->
+                    <!-- video element will be loaded using jQuery -->
+             <!--    </div> --> 
+                <!-- .cd-bg-video-wrapper -->
+            </li>
+        </ul>
+        <!-- .cd-hero-slider -->
+    </section>
+    <!-- .cd-hero -->
+    <div id="signin" class="modal">
+        <span onclick="document.getElementById('signin').style.display='none'" class="close" title="Close Modal">×</span>
+
+        <form class="modal-content animate" method="post" action="/signin">
+
+            <div class="container">
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="checkbox" checked="checked"> Remember me <br>
+                <p>By signing in you agree to our <a href="#">Terms & Privacy</a>.</p>
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Sign In</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div id="signup" class="modal">
+        <span onclick="document.getElementById('signup').style.display='none'" class="close" title="Close Modal">×</span>
+        <form class="modal-content animate" method="post" action="/signup">
+        	<div style="align:center; font-size:20px; margin-left: 27%; color: black; font-family:Bookman, serif; font-weight: 1000">
+        	 <p >Would you like to become a volunteer ?</p>
+        	</div>
+            <div class="container">
+                <label for="firstname"><b>Firstname</b></label>
+                <input name="firstname" type="text" />
+                <label for="lastname"><b>Lastname</b></label>
+                <input name="lastname" type="text" />
+                <label><b>Email</b></label>
+                <input type="text" placeholder="Enter Email" name="email" required>
+                <label><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="checkbox" checked="checked"> Remember me<br>
+                <p>By creating an account you agree to our Terms & Privacy</a>.</p>
+                <div class="clearfix">
+                    <button type="submit" class="signupbtn">Sign Up</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <a href="#" style="text-indent: -999999px; no-repeat; width: 202px; height: 62px; display: block; pointer: cursor; outline: 0; margin-right: 3px">Donate Now</a>
+    <div id="about-us">
+        <main class="cd-main-content">
+    <p>
+        Hurricane Relief is to help people affected by the Hurricanes Harvey, Irma, and Maria.
+    </p>
+    <p align="justify">
+        Thank you for your interest in volunteering with our Hurricane Relief efforts. We are thrilled with the outpouring of support we’ve received from volunteers like yourself.
+
+        The catastrophic rampages of Hurricane Harvey, Irma and Maria have left many displaced and in need. Organizations are on the ground helping victims, it is never too late for your help. All donations made via HurricaneRelief.com will go to United Way to help hurricane victims and the affected outlying areas.
+    </p>
+    </main>
+    <!-- .cd-main-content -->
+    </div>
+
+    <script src="js/jquery-2.1.1.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Resource jQuery -->
+</body>
+
+</html>

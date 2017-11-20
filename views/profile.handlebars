@@ -1,0 +1,24 @@
+<div style ="padding-bottom: 100px"></div>
+<div class="container">
+<div class="row" id="packages-row">
+<div class="col-sm-2"></div>
+<div class="col-sm-8">
+<div class="well well-lg">
+
+       <h2 class="text-center" font-color="#0e347c">Your Itinerary</h2>
+
+{{#each user}}
+
+<h2>Thank you {{this.firstname}} for volunteering your services for the Hurricane Relief project</h2>
+
+{{capitalizeString this.email}}
+
+<p> Please confirm you email address and let's get started assisting those in need</p>
+
+
+{{/each}}
+
+    </div>
+    <div class="col-sm-2"></div>
+</div>
+</div>
