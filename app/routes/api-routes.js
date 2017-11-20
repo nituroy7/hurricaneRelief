@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function (app) {
 
     app.get("/vendors", function (req, res) {
-        db.Providers.findAll({order: db.sequelize.col('price')})
+        db.Providers.findAll()
             .then(function (results) {
                 // console.log(results);
                 // res.json(results);
