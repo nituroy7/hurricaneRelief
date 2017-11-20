@@ -8,7 +8,7 @@ module.exports = function (app) {
                 // console.log(results);
                 // res.json(results);
                 var hbsObject = {
-                    vendor: results
+                    providers: results
                 };
                 res.render("providershbs", hbsObject);
             });
