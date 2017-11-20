@@ -9,8 +9,7 @@ address VARCHAR(100) not null,
 description VARCHAR(300) not null,
 type VARCHAR(50) not null,
 capacity VARCHAR(200) not null,
-budget VARCHAR(220) not null,
-price INTEGER,
+budget VARCHAR(220) not null
 PRIMARY KEY (ID)
 );
 
